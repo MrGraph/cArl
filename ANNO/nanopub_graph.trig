@@ -1,0 +1,996 @@
+@prefix GIAA: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/GIAActivationPub/> .
+@prefix GIAL: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/GIALayerPub/> .
+@prefix GIAD: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/GIADepthPub/> .
+@prefix HIAA: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/HIAActivationPub/> .
+@prefix HIAL: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/HIALayerPub/> .
+@prefix HIAD: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/HIADepthPub/> .
+@prefix IIAA: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/IIAActivationPub/> .
+@prefix IIAL: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/IIALayerPub/> .
+@prefix IIAD: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/IIADepthPub/> .
+@prefix LUIAA: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/LUIAActivationPub/> .
+@prefix LUIAL: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/LUIALayerPub/> .
+@prefix LUIAD: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/LUIADepthPub/> .
+@prefix OIAA: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/OIAActivationPub/> .
+@prefix OIAL: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/OIALayerPub/> .
+@prefix OIAD: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/OIADepthPub/> .
+@prefix UIAA: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/UIAActivationPub/> .
+@prefix UIAL: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/UIALayerPub/> .
+@prefix UIAD: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/UIADepthPub/> .
+@prefix XIAA: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/XIAActivationPub/> .
+@prefix XIAD: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/XIADepthPub/> .
+@prefix XIAL: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/XIALayerPub/> .
+@prefix ZIAA: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/ZIAActivationPub/> .
+@prefix ZIAL: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/ZIALayerPub/> .
+@prefix ZIAD: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/ZIADepthPub/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix anno: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/> .
+@prefix members: <http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_10_Team_Cerebral/members/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix np:  <http://www.nanopub.org/nschema#> .
+@prefix pav: <http://purl.org/pav/2.3> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+
+GIAA:GIAActivationPub_head {
+  anno:GIAActivationPub a np:Nanopublication .
+  anno:GIAActivationPub np:hasAssertion GIAA:GIAActivationPub_assertion .
+  anno:GIAActivationPub np:hasProvenance GIAA:GIAActivationPub_provenance .
+  anno:GIAActivationPub np:hasPublicationInfo GIAA:GIAActivationPub_pubInfo .
+}
+
+GIAA:GIAActivationPub_assertion {
+  anno:GaussianInitializationAlgorithm
+    rdfs:subClassOf _:b .
+  _:b a owl:Restriction ;
+    owl:onProperty anno:isCompatibleWithActivationFunction ;
+    owl:someValuesFrom anno:ActivationFunction .
+  GIAA:GIAActivationPub_assertion a np:Assertion .
+}
+
+GIAA:GIAActivationPub_provenance {
+  GIAA:GIAActivationPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  GIAA:GIAActivationPub_assertion prov:wasAttributedTo _:team_cerebral .
+  _:team_cerebral
+    prov:hadMember members:MatthewKlawonn;
+    prov:hadMember members:MDRidwanAlIqbal;
+    prov:hadMember members:SpencerNorris .
+  GIAA:GIAActivationPub_provenance a np:Provenance .
+}
+
+GIAA:GIAActivationPub_pubInfo {
+  anno:GIAActivationPub prov:wasAttributedTo members:SpencerNorris .
+  anno:GIAActivationPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:GIAActivationPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:GIAActivationPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  GIAA:GIAActivationPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+
+GIAL:GIALayerPub_head {
+  anno:GIALayerPub a np:Nanopublication .
+  anno:GIALayerPub np:hasAssertion GIAL:GIALayerPub_assertion .
+  anno:GIALayerPub np:hasProvenance GIAL:GIALayerPub_provenance .
+  anno:GIALayerPub np:hasPublicationInfo GIAL:GIALayerPub_pubInfo .
+}
+
+GIAL:GIALayerPub_assertion {
+  anno:GaussianInitializationAlgorithm
+    rdfs:subClassOf anno:WeightInitializationAlgorithm , _:b .
+	_:b a owl:Restriction ;
+		owl:onProperty anno:isCompatibleWithLayerType ;
+		owl:someValuesFrom anno:HiddenLayer .
+  GIAL:GIALayerPub_assertion a np:Assertion .
+}
+
+GIAL:GIALayerPub_provenance {
+  GIAL:GIALayerPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  GIAL:GIALayerPub_assertion prov:wasAttributedTo _:team_cerebral .
+  _:team_cerebral
+    prov:hadMember members:MatthewKlawonn;
+    prov:hadMember members:MDRidwanAlIqbal;
+    prov:hadMember members:SpencerNorris .
+  GIAL:GIALayerPub_provenance a np:Provenance .
+}
+
+GIAL:GIALayerPub_pubInfo {
+  anno:GIALayerPub prov:wasAttributedTo members:SpencerNorris .
+  anno:GIALayerPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:GIALayerPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:GIALayerPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  GIAL:GIALayerPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+GIAD:GIADepthPub_head {
+  anno:GIADepthPub a np:Nanopublication .
+  anno:GIADepthPub np:hasAssertion GIAD:GIADepthPub_assertion .
+  anno:GIADepthPub np:hasProvenance GIAD:GIADepthPub_provenance .
+  anno:GIADepthPub np:hasPublicationInfo GIAD:GIADepthPub_pubInfo .
+}
+
+GIAD:GIADepthPub_assertion {
+  anno:GaussianInitializationAlgorithm rdfs:subClassOf _:node1agem9424x22 .
+  _:node1agem9424x22 a owl:Restriction ;
+    owl:onProperty anno:hasMinimumCompatibleDepth ;
+    owl:hasValue "0"^^xsd:integer .
+  anno:GaussianInitializationAlgorithm rdfs:subClassOf _:node1agem9424x21 .
+	_:node1agem9424x21 a owl:Restriction ;
+		owl:onProperty anno:isCompatibleWithActivationFunction ;
+  	owl:someValuesFrom anno:ActivationFunction .
+  GIAD:GIADepthPub_assertion a np:Assertion .
+}
+
+GIAD:GIADepthPub_provenance {
+  GIAD:GIADepthPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  GIAD:GIADepthPub_assertion prov:wasAttributedTo _:team_cerebral .
+  _:team_cerebral
+    prov:hadMember members:MatthewKlawonn;
+    prov:hadMember members:MDRidwanAlIqbal;
+    prov:hadMember members:SpencerNorris .
+  GIAD:GIADepthPub_provenance a np:Provenance .
+}
+
+GIAD:GIADepthPub_pubInfo {
+  anno:GIADepthPub prov:wasAttributedTo members:SpencerNorris .
+  anno:GIADepthPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:GIADepthPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:GIADepthPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  GIAD:GIADepthPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+
+HIAA:HIAActivationPub_head {
+  anno:HIAActivationPub a np:Nanopublication .
+  anno:HIAActivationPub np:hasAssertion HIAA:HIAActivationPub_assertion .
+  anno:HIAActivationPub np:hasProvenance HIAA:HIAActivationPub_provenance .
+  anno:HIAActivationPub np:hasPublicationInfo HIAA:HIAActivationPub_pubInfo .
+}
+
+HIAA:HIAActivationPub_assertion {
+  anno:HeInitializationAlgorithm a owl:Class ;
+    rdfs:subClassOf anno:WeightInitializationAlgorithm , _:b .
+  _:b a owl:Restriction ;
+    owl:onProperty anno:isCompatibleWithActivationFunction ;
+    owl:someValuesFrom anno:ActivationFunction .
+  HIAA:HIAActivationPub_assertion a np:Assertion .
+}
+
+HIAA:HIAActivationPub_provenance {
+  HIAA:HIAActivationPub_assertion prov:generatedAtTime "2016-04-02T17:38:00Z"^^xsd:dateTime .
+  HIAA:HIAActivationPub_assertion prov:wasDerivedFrom _:paper .
+  _:paper dct:title "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification"^^xsd:string;
+          pav:authoredBy _:He .
+
+  _:He
+    a prov:Agent, prov:Person, dct:Agent, foaf:Person;
+           foaf:givenName      "He, Kaiming"^^xsd:string;
+           foaf:mbox           <mailto:kahe@microsoft.com>;
+           foaf:homePage       <http://research.microsoft.com/en-us/um/people/kahe/> .
+
+  HIAA:HIAActivationPub_provenance a np:Provenance .
+}
+
+HIAA:HIAActivationPub_pubInfo {
+  anno:HIAActivationPub prov:wasAttributedTo _:SpencerNorris .
+  anno:HIAActivationPub prov:wasAttributedTo _:MDRidwanAlIqbal .
+  anno:HIAActivationPub prov:wasAttributedTo _:MatthewKlawonn .
+  anno:HIAActivationPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  HIAA:HIAActivationPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+HIAL:HIALayerPub_head {
+  anno:HIALayerPub a np:Nanopublication .
+  anno:HIALayerPub np:hasAssertion HIAL:HIALayerPub_assertion .
+  anno:HIALayerPub np:hasProvenance HIAL:HIALayerPub_provenance .
+  anno:HIALayerPub np:hasPublicationInfo HIAL:HIALayerPub_pubInfo .
+}
+
+HIAL:HIALayerPub_assertion {
+  anno:HeInitializationAlgorithm a owl:Class ;
+    rdfs:subClassOf anno:WeightInitializationAlgorithm , _:b .
+  _:b a owl:Restriction ;
+    owl:onProperty anno:isCompatibleWithLayerType ;
+    owl:someValuesFrom anno:HiddenLayer .
+  HIAL:HIALayerPub_assertion a np:Assertion .
+}
+
+HIAL:HIALayerPub_provenance {
+  HIAL:HIALayerPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  HIAL:HIALayerPub_assertion prov:wasDerivedFrom _:paper .
+  _:paper dct:title "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification"^^xsd:string .
+  _:He
+    a prov:Agent, prov:Person, dct:Agent, foaf:Person;
+           foaf:givenName      "He, Kaiming"^^xsd:string;
+           foaf:mbox           <mailto:kahe@microsoft.com>;
+           foaf:homePage       <http://research.microsoft.com/en-us/um/people/kahe/> .
+  HIAL:HIALayerPub_provenance a np:Provenance .
+}
+
+HIAL:HIALayerPub_pubInfo {
+  anno:HIALayerPub prov:wasAttributedTo members:SpencerNorris .
+  anno:HIALayerPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:HIALayerPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:HIALayerPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  HIAL:HIALayerPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+HIAD:HIADepthPub_head {
+  anno:HIADepthPub a np:Nanopublication .
+  anno:HIADepthPub np:hasAssertion HIAD:HIADepthPub_assertion .
+  anno:HIADepthPub np:hasProvenance HIAD:HIADepthPub_provenance .
+  anno:HIADepthPub np:hasPublicationInfo HIAD:HIADepthPub_pubInfo .
+}
+
+HIAD:HIADepthPub_assertion {
+	anno:HeInitializationAlgorithm
+	 rdfs:subClassOf  _:node1agem9424x24 .
+  _:node1agem9424x24 a owl:Restriction ;
+    owl:onProperty anno:hasMaximumCompatibleDepth ;
+    owl:hasValue "100"^^xsd:integer .
+  anno:HeInitializationAlgorithm rdfs:subClassOf _:node1agem9424x25 .
+  _:node1agem9424x25 a owl:Restriction ;
+    owl:onProperty anno:hasMinimumCompatibleDepth ;
+    owl:hasValue "0"^^xsd:integer .
+  HIAD:HIADepthPub_assertion a np:assertion .
+}
+
+HIAD:HIADepthPub_provenance {
+  HIAD:HIADepthPub_assertion prov:generatedAtTime "2016-04-02T17:38:00Z"^^xsd:dateTime .
+  HIAD:HIADepthPub_assertion prov:wasDerivedFrom _:paper .
+  _:paper dct:title "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification"^^xsd:string;
+          pav:authoredBy _:He .
+
+  _:He
+    a prov:Agent, prov:Person, dct:Agent, foaf:Person;
+           foaf:givenName      "He, Kaiming"^^xsd:string;
+           foaf:mbox           <mailto:kahe@microsoft.com>;
+           foaf:homePage       <http://research.microsoft.com/en-us/um/people/kahe/> .
+
+  HIAD:HIADepthPub_provenance a np:Provenance .
+}
+
+HIAD:HIADepthPub_pubInfo {
+  anno:HIADepthPub prov:wasAttributedTo _:SpencerNorris .
+  anno:HIADepthPub prov:wasAttributedTo _:MDRidwanAlIqbal .
+  anno:HIADepthPub prov:wasAttributedTo _:MatthewKlawonn .
+  anno:HIADepthPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  HIAD:HIADepthPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+
+IIAA:IIAActivationPub_head {
+  anno:IIAActivationPub a np:Nanopublication .
+  anno:IIAActivationPub np:hasAssertion IIAA:IIAActivationPub_assertion .
+  anno:IIAActivationPub np:hasProvenance IIAA:IIAActivationPub_provenance .
+  anno:IIAActivationPub np:hasPublicationInfo IIAA:IIAActivationPub_pubInfo .
+}
+
+IIAA:IIAActivationPub_assertion {
+  anno:IdentityInitializationAlgorithm a owl:Class ;
+    rdfs:subClassOf anno:WeightInitializationAlgorithm , _:b .
+  _:b a owl:Restriction ;
+    owl:onProperty anno:isCompatibleWithActivationFunction ;
+    owl:someValuesFrom anno:ActivationFunction .
+  IIAA:IIAActivationPub_assertion a np:Assertion .
+}
+
+IIAA:IIAActivationPub_provenance {
+  IIAA:IIAActivationPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  IIAA:IIAActivationPub_assertion prov:wasAttributedTo _:team_cerebral .
+  _:team_cerebral
+    prov:hadMember members:MatthewKlawonn;
+    prov:hadMember members:MDRidwanAlIqbal;
+    prov:hadMember members:SpencerNorris .
+  IIAA:IIAActivationPub_provenance a np:Provenance .
+}
+
+IIAA:IIAActivationPub_pubInfo {
+  anno:IIAActivationPub prov:wasAttributedTo members:SpencerNorris .
+  anno:IIAActivationPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:IIAActivationPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:IIAActivationPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  IIAA:IIAActivationPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+IIAL:IIALayerPub_head {
+  anno:IIALayerPub a np:Nanopublication .
+  anno:IIALayerPub np:hasAssertion IIAL:IIALayerPub_assertion .
+  anno:IIALayerPub np:hasProvenance IIAL:IIALayerPub_provenance .
+  anno:IIALayerPub np:hasPublicationInfo IIAL:IIALayerPub_pubInfo .
+}
+
+IIAL:IIALayerPub_assertion {
+  anno:IdentityInitializationAlgorithm a owl:Class ;
+    rdfs:subClassOf anno:WeightInitializationAlgorithm , _:b , _:c .
+  _:b a owl:Restriction ;
+    owl:onProperty anno:isCompatibleWithLayerType ;
+    owl:someValuesFrom anno:TwoDimensionalLayer .
+  _:c a owl:Restriction ;
+    owl:onProperty anno:isCompatibleWithLayerType ;
+    owl:someValuesFrom anno:SquareLayer .
+  IIAL:IIALayerPub_assertion a np:Assertion .
+}
+
+IIAL:IIALayerPub_provenance {
+  IIAL:IIALayerPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  IIAL:IIALayerPub_assertion prov:wasDerivedFrom <http://keras.io/initializations/> .
+  IIAL:IIALayerPub_provenance a np:Provenance .
+}
+
+IIAL:IIALayerPub_pubInfo {
+  anno:IIALayerPub prov:wasAttributedTo members:SpencerNorris .
+  anno:IIALayerPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:IIALayerPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:IIALayerPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  IIAL:IIALayerPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+IIAD:IIADepthPub_head {
+  anno:IIADepthPub a np:Nanopublication .
+  anno:IIADepthPub np:hasAssertion IIAD:IIADepthPub_assertion .
+  anno:IIADepthPub np:hasProvenance IIAD:IIADepthPub_provenance .
+  anno:IIADepthPub np:hasPublicationInfo IIAD:IIADepthPub_pubInfo .
+}
+
+IIAD:IIADepthPub_assertion {
+  anno:IdentityInitializationAlgorithm rdfs:subClassOf _:node1agem9424x37 .
+  _:node1agem9424x37 a owl:Restriction ;
+    owl:onProperty anno:hasMaximumCompatibleDepth ;
+    owl:hasValue "2"^^xsd:integer .
+  anno:IdentityInitializationAlgorithm rdfs:subClassOf _:node1agem9424x40 .
+  _:node1agem9424x40 a owl:Restriction ;
+    owl:onProperty anno:hasMinimumCompatibleDepth ;
+    owl:hasValue "0"^^xsd:integer .
+    IIAD:IIADepthPub_assertion a np:Assertion .
+}
+
+IIAD:IIADepthPub_provenance {
+  IIAD:IIADepthPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  IIAD:IIADepthPub_assertion prov:wasAttributedTo _:team_cerebral .
+  _:team_cerebral
+    prov:hadMember members:MatthewKlawonn;
+    prov:hadMember members:MDRidwanAlIqbal;
+    prov:hadMember members:SpencerNorris .
+  IIAD:IIADepthPub_provenance a np:Provenance .
+}
+
+IIAD:IIADepthPub_pubInfo {
+  anno:IIADepthPub prov:wasAttributedTo members:SpencerNorris .
+  anno:IIADepthPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:IIADepthPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:IIADepthPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  IIAD:IIADepthPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+LUIAA:LUIAActivationPub_head {
+  anno:LUIAActivationPub a np:Nanopublication .
+  anno:LUIAActivationPub np:hasAssertion LUIAA:LUIAActivationPub_assertion .
+  anno:LUIAActivationPub np:hasProvenance LUIAA:LUIAActivationPub_provenance .
+  anno:LUIAActivationPub np:hasPublicationInfo LUIAA:LUIAActivationPub_pubInfo .
+}
+
+LUIAA:LUIAActivationPub_assertion {
+  anno:LecunUniformInitializationAlgorithm a owl:Class ;
+    rdfs:subClassOf anno:WeightInitializationAlgorithm , _:b .
+  _:b a owl:Restriction ;
+    owl:onProperty anno:isCompatibleWithActivationFunction ;
+    owl:someValuesFrom anno:ActivationFunction .
+  LUIAA:LUIAActivationPub_assertion a np:Assertion .
+}
+
+LUIAA:LUIAActivationPub_provenance {
+  LUIAA:LUIAActivationPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  LUIAA:LUIAActivationPub_assertion prov:wasAttributedTo _:team_cerebral .
+  _:team_cerebral
+    prov:hadMember members:MatthewKlawonn;
+    prov:hadMember members:MDRidwanAlIqbal;
+    prov:hadMember members:SpencerNorris .
+  LUIAA:LUIAActivationPub_provenance a np:Provenance .
+}
+
+LUIAA:LUIAActivationPub_pubInfo {
+  anno:LUIAActivationPub prov:wasAttributedTo members:SpencerNorris .
+  anno:LUIAActivationPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:LUIAActivationPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:LUIAActivationPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  LUIAA:LUIAActivationPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+LUIAL:LUIALayerPub_head {
+  anno:LUIALayerPub a np:Nanopublication .
+  anno:LUIALayerPub np:hasAssertion LUIAL:LUIALayerPub_assertion .
+  anno:LUIALayerPub np:hasProvenance LUIAL:LUIALayerPub_provenance .
+  anno:LUIALayerPub np:hasPublicationInfo LUIAL:LUIALayerPub_pubInfo .
+}
+
+LUIAL:LUIALayerPub_assertion {
+  anno:LecunUniformInitializationAlgorithm a owl:Class ;
+   rdfs:subClassOf anno:WeightInitializationAlgorithm , _:b .
+  _:b a owl:Restriction ;
+    owl:onProperty anno:isCompatibleWithLayerType ;
+    owl:someValuesFrom anno:HiddenLayer .
+  LUIAL:LUIALayerPub_assertion a np:Assertion .
+}
+
+LUIAL:LUIALayerPub_provenance {
+  LUIAL:LUIALayerPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  LUIAL:LUIALayerPub_assertion prov:wasAttributedTo _:team_cerebral .
+  _:team_cerebral
+    prov:hadMember members:MatthewKlawonn;
+    prov:hadMember members:MDRidwanAlIqbal;
+    prov:hadMember members:SpencerNorris .
+  LUIAL:LUIALayerPub_provenance a np:Provenance .
+}
+
+LUIAL:LUIALayerPub_pubInfo {
+  anno:LUIALayerPub prov:wasAttributedTo members:SpencerNorris .
+  anno:LUIALayerPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:LUIALayerPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:LUIALayerPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  LUIAL:LUIALayerPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+LUIAD:LUIADepthPub_head {
+  anno:LUIADepthPub a np:Nanopublication .
+  anno:LUIADepthPub np:hasAssertion LUIAD:LUIADepthPub_assertion .
+  anno:LUIADepthPub np:hasProvenance LUIAD:LUIADepthPub_provenance .
+  anno:LUIADepthPub np:hasPublicationInfo LUIAD:LUIADepthPub_pubInfo .
+}
+
+LUIAD:LUIADepthPub_assertion {
+  anno:LecunUniformInitializationAlgorithm rdfs:subClassOf _:node1agem9424x53 .
+  _:node1agem9424x53 a owl:Restriction ;
+    owl:onProperty anno:hasMaximumCompatibleDepth ;
+    owl:hasValue "5"^^xsd:integer .
+  anno:LecunUniformInitializationAlgorithm rdfs:subClassOf _:node1agem9424x54 .
+  _:node1agem9424x54 a owl:Restriction ;
+    owl:onProperty anno:hasMinimumCompatibleDepth ;
+    owl:hasValue "0"^^xsd:integer .
+  LUIAD:LUIADepthPub_assertion a np:Assertion .
+}
+
+LUIAD:LUIADepthPub_provenance {
+  LUIAD:LUIADepthPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  LUIAD:LUIADepthPub_assertion prov:wasDerivedFrom _:paper .
+  _:paper dct:title "Efficient BackProp"^^xsd:string ;
+    pav:authoredBy _:LeCun .
+  _:LeCun
+    a prov:Agent, prov:Person, dct:Agent, foaf:Person;
+           foaf:givenName      "LeCun, Yann"^^xsd:string.
+  LUIAD:LUIADepthPub_provenance a np:Provenance .
+}
+
+LUIAD:LUIADepthPub_pubInfo {
+  anno:LUIADepthPub prov:wasAttributedTo members:SpencerNorris .
+  anno:LUIADepthPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:LUIADepthPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:LUIADepthPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  LUIAD:LUIADepthPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+OIAA:OIAActivationPub_head {
+  anno:OIAActivationPub a np:Nanopublication .
+  anno:OIAActivationPub np:hasAssertion OIAA:OIAActivationPub_assertion .
+  anno:OIAActivationPub np:hasProvenance OIAA:OIAActivationPub_provenance .
+  anno:OIAActivationPub np:hasPublicationInfo OIAA:OIAActivationPub_pubInfo .
+}
+
+OIAA:OIAActivationPub_assertion {
+  anno:OrthogonalInitializationAlgorithm a owl:Class ;
+    rdfs:subClassOf anno:WeightInitializationAlgorithm , _:b .
+  _:b a owl:Restriction ;
+    owl:onProperty anno:isCompatibleWithActivationFunction ;
+    owl:someValuesFrom anno:ActivationFunction .
+  OIAA:OIAActivationPub_assertion a np:Assertion .
+}
+
+OIAA:OIAActivationPub_provenance {
+  OIAA:OIAActivationPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  OIAA:OIAActivationPub_assertion prov:wasAttributedTo _:team_cerebral .
+  _:team_cerebral
+    prov:hadMember members:MatthewKlawonn;
+    prov:hadMember members:MDRidwanAlIqbal;
+    prov:hadMember members:SpencerNorris .
+  OIAA:OIAActivationPub_provenance a np:Provenance .
+}
+
+OIAA:OIAActivationPub_pubInfo {
+  anno:OIAActivationPub prov:wasAttributedTo members:SpencerNorris .
+  anno:OIAActivationPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:OIAActivationPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:OIAActivationPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  OIAA:OIAActivationPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+OIAL:OIALayerPub_head {
+  anno:OIALayerPub a np:Nanopublication .
+  anno:OIALayerPub np:hasAssertion OIAL:OIALayerPub_assertion .
+  anno:OIALayerPub np:hasProvenance OIAL:OIALayerPub_provenance .
+  anno:OIALayerPub np:hasPublicationInfo OIAL:OIALayerPub_pubInfo .
+}
+
+OIAL:OIALayerPub_assertion {
+  anno:OrthogonalInitializationAlgorithm a owl:Class ;
+    rdfs:subClassOf anno:WeightInitializationAlgorithm , _:b , _:c .
+  _:b a owl:Restriction ;
+    owl:onProperty anno:isCompatibleWithLayerType ;
+    owl:someValuesFrom anno:SquareLayer .
+  _:c a owl:Restriction ;
+		owl:onProperty anno:isCompatibleWithLayerType ;
+		owl:someValuesFrom anno:TwoDimensionalLayer .
+  OIAL:OIALayerPub_assertion a np:Assertion .
+}
+
+OIAL:OIALayerPub_provenance {
+  OIAL:OIALayerPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  OIAL:OIALayerPub_assertion prov:wasDerivedFrom <http://keras.io/initializations/> .
+  OIAL:OIALayerPub_provenance a np:Provenance .
+}
+
+OIAL:OIALayerPub_pubInfo {
+  anno:OIALayerPub prov:wasAttributedTo members:SpencerNorris .
+  anno:OIALayerPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:OIALayerPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:OIALayerPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  OIAL:OIALayerPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+OIAD:OIADepthPub_head {
+  anno:OIADepthPub a np:Nanopublication .
+  anno:OIADepthPub np:hasAssertion OIAD:OIADepthPub_assertion .
+  anno:OIADepthPub np:hasProvenance OIAD:OIADepthPub_provenance .
+  anno:OIADepthPub np:hasPublicationInfo OIAD:OIADepthPub_pubInfo .
+}
+
+OIAD:OIADepthPub_assertion {
+  anno:OrthogonalInitializationAlgorithm rdfs:subClassOf _:node1agem9424x65 .
+  _:node1agem9424x65 a owl:Restriction ;
+    owl:onProperty anno:hasMaximumCompatibleDepth ;
+    owl:hasValue "2"^^xsd:integer .
+  anno:OrthogonalInitializationAlgorithm rdfs:subClassOf _:node1agem9424x66 .
+  _:node1agem9424x66 a owl:Restriction ;
+    owl:onProperty anno:hasMinimumCompatibleDepth ;
+    owl:hasValue "0"^^xsd:integer .
+  OIAD:OIADepthPub_assertion a np:Assertion .
+}
+
+OIAD:OIADepthPub_provenance {
+  OIAD:OIADepthPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  OIAD:OIADepthPub_assertion prov:wasAttributedTo _:team_cerebral .
+  _:team_cerebral
+    prov:hadMember members:MatthewKlawonn;
+    prov:hadMember members:MDRidwanAlIqbal;
+    prov:hadMember members:SpencerNorris .
+  OIAD:OIADepthPub_provenance a np:Provenance .
+}
+
+OIAD:OIADepthPub_pubInfo {
+  anno:OIADepthPub prov:wasAttributedTo members:SpencerNorris .
+  anno:OIADepthPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:OIADepthPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:OIADepthPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  OIAD:OIADepthPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+
+UIAA:UIAActivationPub_head {
+  anno:UIAActivationPub a np:Nanopublication .
+  anno:UIAActivationPub np:hasAssertion UIAA:UIAActivationPub_assertion .
+  anno:UIAActivationPub np:hasProvenance UIAA:UIAActivationPub_provenance .
+  anno:UIAActivationPub np:hasPublicationInfo UIAA:UIAActivationPub_pubInfo .
+}
+
+UIAA:UIAActivationPub_assertion {
+  anno:UniformInitializationAlgorithm
+    rdfs:subClassOf anno:WeightInitializationAlgorithm , _:b .
+  _:b a owl:Restriction ;
+    owl:onProperty anno:isCompatibleWithActivationFunction ;
+    owl:someValuesFrom anno:ActivationFunction .
+  UIAA:UIAActivationPub_assertion a np:Assertion .
+}
+
+UIAA:UIAActivationPub_provenance {
+  UIAA:UIAActivationPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  UIAA:UIAActivationPub_assertion prov:wasAttributedTo _:team_cerebral .
+  _:team_cerebral
+    prov:hadMember members:MatthewKlawonn;
+    prov:hadMember members:MDRidwanAlIqbal;
+    prov:hadMember members:SpencerNorris .
+  UIAA:UIAActivationPub_provenance a np:Provenance .
+}
+
+UIAA:UIAActivationPub_pubInfo {
+  anno:UIAActivationPub prov:wasAttributedTo members:SpencerNorris .
+  anno:UIAActivationPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:UIAActivationPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:UIAActivationPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  UIAA:UIAActivationPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+UIAL:UIALayerPub_head {
+  anno:UIALayerPub a np:Nanopublication .
+  anno:UIALayerPub np:hasAssertion UIAL:UIALayerPub_assertion .
+  anno:UIALayerPub np:hasProvenance UIAL:UIALayerPub_provenance .
+  anno:UIALayerPub np:hasPublicationInfo UIAL:UIALayerPub_pubInfo .
+}
+
+UIAL:UIALayerPub_assertion {
+  anno:UniformInitializationAlgorithm
+    rdfs:subClassOf anno:WeightInitializationAlgorithm , _:b .
+  _:b a owl:Restriction ;
+    owl:onProperty anno:isCompatibleWithLayerType ;
+    owl:someValuesFrom anno:HiddenLayer .
+  UIAL:UIALayerPub_assertion a np:Assertion .
+}
+
+UIAL:UIALayerPub_provenance {
+  UIAL:UIALayerPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  UIAL:UIALayerPub_assertion prov:wasAttributedTo _:team_cerebral .
+  _:team_cerebral
+    prov:hadMember members:MatthewKlawonn;
+    prov:hadMember members:MDRidwanAlIqbal;
+    prov:hadMember members:SpencerNorris .
+  UIAL:UIALayerPub_provenance a np:Provenance .
+}
+
+UIAL:UIALayerPub_pubInfo {
+  anno:UIALayerPub prov:wasAttributedTo members:SpencerNorris .
+  anno:UIALayerPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:UIALayerPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:UIALayerPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  UIAL:UIALayerPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+UIAD:UIADepthPub_head {
+  anno:UIADepthPub a np:Nanopublication .
+  anno:UIADepthPub np:hasAssertion UIAD:UIADepthPub_assertion .
+  anno:UIADepthPub np:hasProvenance UIAD:UIADepthPub_provenance .
+  anno:UIADepthPub np:hasPublicationInfo UIAD:UIADepthPub_pubInfo .
+}
+
+UIAD:UIADepthPub_assertion {
+  anno:UniformInitializationAlgorithm rdfs:subClassOf _:node1agem9424x78 .
+  _:node1agem9424x78 a owl:Restriction ;
+    owl:onProperty anno:hasMaximumCompatibleDepth ;
+    owl:hasValue "2"^^xsd:integer .
+  anno:UniformInitializationAlgorithm rdfs:subClassOf _:node1agem9424x76 .
+  _:node1agem9424x76 a owl:Restriction ;
+    owl:onProperty anno:hasMinimumCompatibleDepth ;
+    owl:hasValue "0"^^xsd:integer .
+  UIAD:UIADepthPub_assertion a np:Assertion .
+}
+
+UIAD:UIADepthPub_provenance {
+  UIAD:UIADepthPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  UIAD:UIADepthPub_assertion prov:wasAttributedTo _:team_cerebral .
+  _:team_cerebral
+    prov:hadMember members:MatthewKlawonn;
+    prov:hadMember members:MDRidwanAlIqbal;
+    prov:hadMember members:SpencerNorris .
+  UIAD:UIADepthPub_provenance a np:Provenance .
+}
+
+UIAD:UIADepthPub_pubInfo {
+  anno:UIADepthPub prov:wasAttributedTo members:SpencerNorris .
+  anno:UIADepthPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:UIADepthPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:UIADepthPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  UIAD:UIADepthPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+
+XIAA:XIAActivationPub_head {
+  anno:XIAActivationPub a np:Nanopublication .
+  anno:XIAActivationPub np:hasAssertion XIAA:XIAActivationPub_assertion .
+  anno:XIAActivationPub np:hasProvenance XIAA:XIAActivationPub_provenance .
+  anno:XIAActivationPub np:hasPublicationInfo XIAA:XIAActivationPub_pubInfo .
+}
+
+XIAA:XIAActivationPub_assertion {
+  anno:XavierInitializationAlgorithm a owl:Class ;
+    rdfs:subClassOf anno:WeightInitializationAlgorithm , _:b .
+  _:b a owl:Restriction ;
+    owl:onProperty anno:isCompatibleWithActivationFunction ;
+    owl:someValuesFrom anno:LinearActivationFunction .
+  XIAA:XIAActivationPub_assertion a np:Assertion .
+}
+
+XIAA:XIAActivationPub_provenance {
+  XIAA:XIAActivationPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  XIAA:XIAActivationPub_assertion prov:wasDerivedFrom _:paper .
+  _:paper dct:title "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification"^^xsd:string ;
+    pav:authoredBy _:He .
+
+  _:He
+    a prov:Agent, prov:Person, dct:Agent, foaf:Person;
+           foaf:givenName      "He, Kaiming"^^xsd:string;
+           foaf:mbox           <mailto:kahe@microsoft.com>;
+           foaf:homePage       <http://research.microsoft.com/en-us/um/people/kahe/> .
+
+  XIAA:XIAActivationPub_provenance a np:Provenance .
+}
+
+XIAA:XIAActivationPub_pubInfo {
+  anno:XIAActivationPub prov:wasAttributedTo members:SpencerNorris .
+  anno:XIAActivationPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:XIAActivationPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:XIAActivationPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  XIAA:XIAActivationPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+XIAD:XIADepthPub_head {
+  anno:XIADepthPub a np:Nanopublication .
+  anno:XIADepthPub np:hasAssertion XIAD:XIADepthPub_assertion .
+  anno:XIADepthPub np:hasProvenance XIAD:XIADepthPub_provenance .
+  anno:XIADepthPub np:hasPublicationInfo XIAD:XIADepthPub_pubInfo .
+}
+
+XIAD:XIADepthPub_assertion {
+  anno:XavierInitializationAlgorithm a owl:Class ;
+    rdfs:subClassOf anno:WeightInitializationAlgorithm , _:b , _:c .
+  _:b a owl:Restriction ;
+		owl:onProperty anno:hasMaximumCompatibleDepth ;
+  	owl:hasValue "100"^^xsd:integer .
+  _:c a owl:Restriction ;
+		owl:onProperty anno:hasMinimumCompatibleDepth ;
+		owl:hasValue "0"^^xsd:integer .
+  XIAD:XIADepthPub_assertion a np:Assertion .
+}
+
+XIAD:XIADepthPub_provenance {
+  XIAD:XIADepthPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  XIAD:XIADepthPub_assertion prov:wasDerivedFrom _:paper .
+  _:paper dct:title "Understanding the Difficulty of Training Deep Feedforward Neural Networks"^^xsd:string ;
+    pav:authoredBy _:Glorot .
+
+  _:Glorot
+    a prov:Agent, prov:Person, dct:Agent, foaf:Person;
+           foaf:givenName      "Glorot, Xavier"^^xsd:string.
+
+  XIAD:XIADepthPub_provenance a np:Provenance .
+}
+
+XIAD:XIADepthPub_pubInfo {
+  anno:XIADepthPub prov:wasAttributedTo members:SpencerNorris .
+  anno:XIADepthPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:XIADepthPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:XIADepthPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  XIAD:XIADepthPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+XIAL:XIALayerPub_head {
+  anno:XIALayerPub a np:Nanopublication .
+  anno:XIALayerPub np:hasAssertion XIAL:XIALayerPub_assertion .
+  anno:XIALayerPub np:hasProvenance XIAL:XIALayerPub_provenance .
+  anno:XIALayerPub np:hasPublicationInfo XIAL:XIALayerPub_pubInfo .
+}
+
+XIAL:XIALayerPub_assertion {
+  anno:XavierInitializationAlgorithm a owl:Class ;
+    rdfs:subClassOf anno:WeightInitializationAlgorithm , _:b .
+  _:b a owl:Restriction ;
+    owl:onProperty anno:isCompatibleWithLayerType ;
+    owl:someValuesFrom anno:HiddenLayer .
+  XIAL:XIALayerPub_assertion a np:Assertion .
+}
+
+XIAL:XIALayerPub_provenance {
+  XIAL:XIALayerPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  XIAL:XIALayerPub_assertion prov:wasAttributedTo _:team_cerebral .
+  _:team_cerebral
+    prov:hadMember members:MatthewKlawonn;
+    prov:hadMember members:MDRidwanAlIqbal;
+    prov:hadMember members:SpencerNorris .
+  XIAL:XIALayerPub_provenance a np:Provenance .
+}
+
+XIAL:XIALayerPub_pubInfo {
+  anno:XIALayerPub prov:wasAttributedTo members:SpencerNorris .
+  anno:XIALayerPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:XIALayerPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:XIALayerPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  XIAL:XIALayerPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+ZIAA:ZIAActivationPub_head {
+  anno:ZIAActivationPub a np:Nanopublication .
+  anno:ZIAActivationPub np:hasAssertion ZIAA:ZIAActivationPub_assertion .
+  anno:ZIAActivationPub np:hasProvenance ZIAA:ZIAActivationPub_provenance .
+  anno:ZIAActivationPub np:hasPublicationInfo ZIAA:ZIAActivationPub_pubInfo .
+}
+
+ZIAA:ZIAActivationPub_assertion {
+  anno:ZeroInitializationAlgorithm a owl:Class ;
+    rdfs:subClassOf anno:WeightInitializationAlgorithm , _:b .
+  _:b a owl:Restriction ;
+    owl:onProperty anno:isCompatibleWithActivationFunction ;
+    owl:onClass anno:ActivationFunction ;
+    owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger .
+  ZIAA:ZIAActivationPub_assertion a np:Assertion .
+}
+
+ZIAA:ZIAActivationPub_provenance {
+  ZIAA:ZIAActivationPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  ZIAA:ZIAActivationPub_assertion prov:wasAttributedTo _:team_cerebral .
+  _:team_cerebral
+    prov:hadMember members:MatthewKlawonn;
+    prov:hadMember members:MDRidwanAlIqbal;
+    prov:hadMember members:SpencerNorris .
+  ZIAA:ZIAActivationPub_provenance a np:Provenance .
+}
+
+ZIAA:ZIAActivationPub_pubInfo {
+  anno:ZIAActivationPub prov:wasAttributedTo members:SpencerNorris .
+  anno:ZIAActivationPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:ZIAActivationPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:ZIAActivationPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  ZIAA:ZIAActivationPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+ZIAL:ZIALayerPub_head {
+  anno:ZIALayerPub a np:Nanopublication .
+  anno:ZIALayerPub np:hasAssertion ZIAL:ZIALayerPub_assertion .
+  anno:ZIALayerPub np:hasProvenance ZIAL:ZIALayerPub_provenance .
+  anno:ZIALayerPub np:hasPublicationInfo ZIAL:ZIALayerPub_pubInfo .
+}
+
+ZIAL:ZIALayerPub_assertion {
+  anno:ZeroInitializationAlgorithm a owl:Class ;
+    rdfs:subClassOf anno:WeightInitializationAlgorithm , _:b .
+  _:b a owl:Restriction ;
+    owl:onProperty anno:isCompatibleWithLayerType ;
+    owl:onClass anno:Layer ;
+    owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger .
+  ZIAL:ZIALayerPub_assertion a np:Assertion .
+}
+
+ZIAL:ZIALayerPub_provenance {
+  ZIAL:ZIALayerPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  ZIAL:ZIALayerPub_assertion prov:wasAttributedTo _:team_cerebral .
+  _:team_cerebral
+    prov:hadMember members:MatthewKlawonn;
+    prov:hadMember members:MDRidwanAlIqbal;
+    prov:hadMember members:SpencerNorris .
+  ZIAL:ZIALayerPub_provenance a np:Provenance .
+}
+
+ZIAL:ZIALayerPub_pubInfo {
+  anno:ZIALayerPub prov:wasAttributedTo members:SpencerNorris .
+  anno:ZIALayerPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:ZIALayerPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:ZIALayerPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  ZIAL:ZIALayerPub_pubInfo a np:PublicationInfo .
+}
+
+
+
+
+
+
+ZIAD:ZIADepthPub_head {
+  anno:ZIADepthPub a np:Nanopublication .
+  anno:ZIADepthPub np:hasAssertion ZIAD:ZIADepthPub_assertion .
+  anno:ZIADepthPub np:hasProvenance ZIAD:ZIADepthPub_provenance .
+  anno:ZIADepthPub np:hasPublicationInfo ZIAD:ZIADepthPub_pubInfo .
+}
+
+ZIAD:ZIADepthPub_assertion {
+  anno:ZeroInitializationAlgorithm rdfs:subClassOf _:node1agem9424x103 .
+  _:node1agem9424x103 a owl:Restriction ;
+    owl:onProperty anno:hasMaximumCompatibleDepth ;
+    owl:hasValue "0"^^xsd:integer .
+  anno:ZeroInitializationAlgorithm rdfs:subClassOf _:node1agem9424x104 .
+  _:node1agem9424x104 a owl:Restriction ;
+  owl:onProperty anno:hasMinimumCompatibleDepth ;
+  owl:hasValue "0"^^xsd:integer .
+  ZIAD:ZIADepthPub_assertion a np:Assertion .
+}
+
+ZIAD:ZIADepthPub_provenance {
+  ZIAD:ZIADepthPub_assertion prov:generatedAtTime "2016-04-02T18:16:00Z"^^xsd:dateTime .
+  ZIAD:ZIADepthPub_assertion prov:wasAttributedTo _:team_cerebral .
+  _:team_cerebral
+    prov:hadMember members:MatthewKlawonn;
+    prov:hadMember members:MDRidwanAlIqbal;
+    prov:hadMember members:SpencerNorris .
+  ZIAD:ZIADepthPub_provenance a np:Provenance .
+}
+
+ZIAD:ZIADepthPub_pubInfo {
+  anno:ZIADepthPub prov:wasAttributedTo members:SpencerNorris .
+  anno:ZIADepthPub prov:wasAttributedTo members:MDRidwanAlIqbal .
+  anno:ZIADepthPub prov:wasAttributedTo members:MatthewKlawonn .
+  anno:ZIADepthPub prov:generatedAtTime "2016-04-15T20:44:00Z"^^xsd:dateTime .
+  ZIAD:ZIADepthPub_pubInfo a np:PublicationInfo .
+}
