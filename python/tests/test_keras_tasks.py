@@ -3,6 +3,7 @@ import logging
 
 TEST_SUCCESS = True
 TEST_FAILURE = False
+keras = "Keras"
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -21,7 +22,10 @@ def test_keras_imports_and_version():
 #Recommend weights from in memory model objects
 #Input is a boolean indicating whether to test writing to a file,
 #or simply return a recommendation object
-def test_keras_weight_recommendation_from_in_memory_MLP():
+def test_keras_weight_recommendation_from_in_memory_MLP(keras_model):
+    #Create cArl ArtificialNeuralNetwork
+    ann = ArtificialNeuralNetwork(keras_model, keras)
+    recommendation = recommend_weight_initialization(ann)
 def test_keras_weight_recommendation_from_in_memory_CNN():
 def test_keras_weight_recommendation_from_in_memory_RNN():
 def test_keras_weight_recommendation_from_in_memory_CNN_RNN_merge():
