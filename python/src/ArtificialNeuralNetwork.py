@@ -1,4 +1,4 @@
 
 
 
-class ArtificialNeuralNetwork(Object)
+class ArtificialNeuralNetwork(Object):
